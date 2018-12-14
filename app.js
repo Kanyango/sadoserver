@@ -8,16 +8,8 @@ var jwt      = require('jsonwebtoken');
 
 var app = express();
 
-app.config = config;
-
 app.server = http.createServer(app);
 
-app.db = mongoose.createConnection(config.mongodb.uri);
-app.db.once('open', function(){
-
-});
-
-app.set('port' , config.port);
 
 //app.use(express.static(__dirname + '/dist'));
 app.use(bodyParser.json());
