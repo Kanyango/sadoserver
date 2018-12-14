@@ -1,6 +1,7 @@
 'use strict';
 const https = require('https');
 const crypto = require('crypto');  
+var request = require('request')
 
 var payments = {
 
@@ -17,6 +18,18 @@ var payments = {
        
         var hashString = crypto.createHmac('SHA256', sharedSecret).update(preHashString).digest('hex');  
         var xPayToken = 'xv2:' + timestamp + ':' + hashString;
+		
+        console.log('Iam post body', req.body);
+		
+	request(
+		{
+	method: 'POST',
+	url   : 'https://sandbox.api.visa.com/cybersource/v2/payments?apikey={9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k}',
+	headers: [ {name: 'content-type', value: 'application/json'},
+		  {name: 'x-pay-token', value: xPayToken }],
+        postData: postBody
+		
+		})
         
 		
 		
