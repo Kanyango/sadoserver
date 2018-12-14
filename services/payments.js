@@ -10,7 +10,7 @@ var payments = {
 	{
 		
         var timestamp = Math.floor(Date.now() / 1000);  
-        var resourcePath = '/v2/payments';
+        var resourcePath = 'v2/payments';
         var queryParams = '9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k';
         var postBody = req.body;
         var sharedSecret = 'nEVIjxI@hPI+aK+Odii+v}/LAK$nAN5jyTSckO9f';
