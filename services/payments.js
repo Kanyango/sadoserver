@@ -24,7 +24,7 @@ var payments = {
 	request(
 		{
 	method: 'POST',
-	url   : 'https://sandbox.api.visa.com/cybersource/v2/payments?apikey={9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k}',
+	url   : 'https://sandbox.api.visa.com/cybersource/v2/payments?apikey=9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k',
 	headers: [ {name: 'content-type', value: 'application/json'},
 		  {name: 'x-pay-token', value: xPayToken }],
         postData: postBody
