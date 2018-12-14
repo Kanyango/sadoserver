@@ -21,6 +21,7 @@ var payments = {
         var xPayToken = 'xv2:' + timestamp + ':' + hashString;
 		
         //console.log('Iam post body', postBody);
+     
 		
         
 	request(
@@ -29,9 +30,12 @@ var payments = {
 	method: 'POST',
 	headers:  {name: 'content-type', value: 'application/json',
 		  name: 'x-pay-token', value: xPayToken },
-        postData: postBody
+        json: true,
+        body: postBody
 		
-		})
+		},function (error, response, body){
+   		 console.log(response);
+	});
        
         
 		
