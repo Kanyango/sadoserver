@@ -15,7 +15,7 @@ app.server = http.createServer(app);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(function(req, res, next) {
+app.all('/*', function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");  
     //res.header('Access-Control-Expose-Headers', 'Authorization');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
