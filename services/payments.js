@@ -11,7 +11,7 @@ var payments = {
         var timestamp = Math.floor(Date.now() / 1000);  
         var resourcePath = '/v2/payments';
         var queryParams = '9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k';
-        var postBody = JSON.parse(req.body);
+        var postBody = req.body;
         var sharedSecret = 'nEVIjxI@hPI+aK+Odii+v}/LAK$nAN5jyTSckO9f';
         
         var preHashString = timestamp + resourcePath + queryParams + postBody;  
@@ -19,7 +19,7 @@ var payments = {
         var hashString = crypto.createHmac('SHA256', sharedSecret).update(preHashString).digest('hex');  
         var xPayToken = 'xv2:' + timestamp + ':' + hashString;
 		
-        console.log('Iam post body', JSON.parse(req.body));
+        console.log('Iam post body', postBody);
 		
 	/*request(
 		{
