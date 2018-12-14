@@ -34,7 +34,7 @@ var payments = {
         body: postBody
 		
 		},function (error, response, body){
-   		 console.log(response);
+   		 console.log('iam body', body);
 	});
        
         
