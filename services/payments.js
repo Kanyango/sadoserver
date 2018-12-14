@@ -2,6 +2,7 @@
 const https = require('https');
 const crypto = require('crypto');  
 var request = require('request')
+var cors = require('cors');
 
 var payments = {
 
@@ -21,15 +22,17 @@ var payments = {
 		
         //console.log('Iam post body', postBody);
 		
+        
 	request(
 		{
+        url   : 'https://sandbox.api.visa.com/cybersource/v2/payments?apikey=9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k',
 	method: 'POST',
-	url   : 'https://sandbox.api.visa.com/cybersource/v2/payments?apikey=9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k',
 	headers: [ {name: 'content-type', value: 'application/json'},
 		  {name: 'x-pay-token', value: xPayToken }],
         postData: postBody
 		
 		})
+       
         
 		
 		
