@@ -19,7 +19,7 @@ var payments = {
         var hashString = crypto.createHmac('SHA256', sharedSecret).update(preHashString).digest('hex');  
         var xPayToken = 'xv2:' + timestamp + ':' + hashString;
 		
-        console.log('Iam post body', postBody);
+        //console.log('Iam post body', postBody);
 		
 	request(
 		{
