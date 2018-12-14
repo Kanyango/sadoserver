@@ -21,7 +21,7 @@ var payments = {
 		
         console.log('Iam post body', req.body);
 		
-	request(
+	/*request(
 		{
 	method: 'POST',
 	url   : 'https://sandbox.api.visa.com/cybersource/v2/payments?apikey=9XS2NUQR97HTKTJQGOWI21K--tSViYxPKgmJ8oPbbtacEqv0k',
@@ -29,7 +29,7 @@ var payments = {
 		  {name: 'x-pay-token', value: xPayToken }],
         postData: postBody
 		
-		})
+		})*/
         
 		
 		
